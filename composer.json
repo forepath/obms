@@ -1,0 +1,137 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "forepath/obms",
+    "type": "project",
+    "description": "The OBMS core application.",
+    "version": "1.0.0",
+    "keywords": ["obms", "open business management software"],
+    "license": "Apache-2.0",
+    "homepage": "https://forepath.io",
+    "support": {
+        "docs": "https://forepath.io/docs/obms",
+        "email": "support@forepath.io",
+        "issues": "https://github.com/forepath/obms/issues",
+        "source": "https://github.com/forepath/obms"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-fileinfo": "*",
+        "ext-imagick": "*",
+        "ext-imap": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-mbstring": "*",
+        "ext-redis": "*",
+        "ext-gd": "*",
+        "ext-xml": "*",
+        "awobaz/compoships": "^2.1",
+        "bacon/bacon-qr-code": "^3.0",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "darkaonline/l5-swagger": "^9.0",
+        "doctrine/dbal": "^3.2",
+        "endroid/qr-code": "^5.1",
+        "guzzlehttp/guzzle": "^7.8",
+        "horstoeko/zugferd-laravel": "^1.0",
+        "ignited/laravel-omnipay": "3.*",
+        "laravel/fortify": "^1.24",
+        "laravel/framework": "^11.0",
+        "laravel/horizon": "^5.7",
+        "laravel/passport": "^12.0",
+        "laravel/pulse": "^1.4",
+        "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.19",
+        "laravel/tinker": "^2.9",
+        "laravel/ui": "^4.5",
+        "lcobucci/clock": "^2.2",
+        "forepath/obms-module-sdk": "^1.0",
+        "forepath/obms-paymentgateway-paypal": "^1.0",
+        "forepath/obms-product-sample": "^1.0",
+        "forepath/obms-theme-aurora": "^1.0",
+        "php-http/guzzle7-adapter": "^1.1",
+        "phpseclib/phpseclib": "^3.0",
+        "sabre/dav": "^4.2",
+        "scssphp/scssphp": "^2.0",
+        "smhg/sepa-qr-data": "^1.1",
+        "socialiteproviders/google": "^4.1",
+        "socialiteproviders/microsoft": "^4.6"
+    },
+    "require-dev": {
+        "beyondcode/laravel-er-diagram-generator": "^4.0",
+        "cweagans/composer-patches": "^1.7",
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.5",
+        "spatie/laravel-ignition": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/Helpers/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan obms:install-theme-packages"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "format": "./vendor/bin/pint",
+        "format-check": "./vendor/bin/pint --test",
+        "analyse": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "analyse-baseline": "./vendor/bin/phpstan analyse --memory-limit=2G --generate-baseline",
+        "test-all": [
+            "@format-check",
+            "@analyse"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "patches": {
+            "beyondcode/laravel-er-diagram-generator": {
+                "Laravel 11 database schema identification": "patches/beyondcode/laravel-er-diagram-generator/database-schema-identification.patch"
+            }
+        },
+        "installer-paths": {
+            "app/Products/{$name}": ["type:obms-product"],
+            "app/PaymentGateways/{$name}": ["type:obms-paymentgateway"]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true,
+            "composer/installers": true,
+            "forepath/obms-composer-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

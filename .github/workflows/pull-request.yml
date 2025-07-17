@@ -1,0 +1,82 @@
+name: Pull request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint_commit:
+    name: Lint commit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Run commit lint
+        run: npx commitlint --from="$(git merge-base HEAD origin/${{ github.event.pull_request.base.ref }})"
+
+  check_code:
+    name: Check code style
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Run Pint
+        run: vendor/bin/pint --test
+
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse --memory-limit=2G
+  
+  code_coverage:
+    name: Code coverage
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql/mysql-server:8.0
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: 'root'
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: 'testing'
+          MYSQL_USER: 'testing'
+          MYSQL_PASSWORD: 'testing'
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Run tests
+        run: vendor/bin/phpunit --coverage-clover clover.xml
+        env:
+          APP_KEY: ${{ secrets.TESTING_APP_KEY }}
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: clover.xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: clover.xml
+          flags: pull-request
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

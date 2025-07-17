@@ -1,0 +1,8 @@
+parameters:
+    level: 0
+    paths:
+        - app
+        - tests
+    excludePaths:
+        - app/Products/*
+        - app/PaymentGateways/*
