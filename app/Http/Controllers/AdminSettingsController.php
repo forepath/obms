@@ -144,8 +144,31 @@ class AdminSettingsController extends Controller
 
         /* @var Setting $setting */
         if (! empty($setting = Setting::find($request->setting_id))) {
+            $defaultValue = function (string $setting): ?string {
+                switch ($setting) {
+                    case 'theme.primary':
+                        return '#040E29';
+                    case 'theme.white':
+                        return '#FFFFFF';
+                    case 'theme.gray':
+                        return '#F3F9FC';
+                    case 'theme.success':
+                        return '#0F7038';
+                    case 'theme.warning':
+                        return '#FFD500';
+                    case 'theme.danger':
+                        return '#B21E35';
+                    case 'theme.info':
+                        return '#1464F6';
+                    case 'theme.body':
+                        return '#3C4858';
+                    default:
+                        return null;
+                }
+            };
+
             $setting->update([
-                'value' => $request->value ? $request->value : null,
+                'value' => $request->value ? $request->value : $defaultValue($setting->setting),
             ]);
 
             $tenant   = request()->tenant;
@@ -155,10 +178,13 @@ class AdminSettingsController extends Controller
             if (
                 collect([
                     'theme.primary',
-                    'theme.secondary',
-                    'theme.secondary-dark',
                     'theme.white',
                     'theme.gray',
+                    'theme.success',
+                    'theme.warning',
+                    'theme.danger',
+                    'theme.info',
+                    'theme.body',
                 ])->contains($setting->setting)
             ) {
                 $tenant   = request()->tenant;
