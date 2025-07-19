@@ -409,7 +409,7 @@ class AdminContractController extends Controller
 
                 if (! empty($sepaQr)) {
                     $sepaQr = \Endroid\QrCode\Builder\Builder::create()
-                        ->data($sepaQr)
+                        ->data($sepaQr->__toString())
                         ->errorCorrectionLevel(ErrorCorrectionLevel::Medium)
                         ->build()
                         ->getDataUri();
@@ -529,7 +529,7 @@ class AdminContractController extends Controller
 
                         if (! empty($sepaQr)) {
                             $sepaQr = \Endroid\QrCode\Builder\Builder::create()
-                                ->data($sepaQr)
+                                ->data($sepaQr->__toString())
                                 ->errorCorrectionLevel(ErrorCorrectionLevel::Medium)
                                 ->build()
                                 ->getDataUri();
@@ -605,7 +605,7 @@ class AdminContractController extends Controller
 
                     if (! empty($sepaQr)) {
                         $sepaQr = \Endroid\QrCode\Builder\Builder::create()
-                            ->data($sepaQr)
+                            ->data($sepaQr->__toString())
                             ->errorCorrectionLevel(ErrorCorrectionLevel::Medium)
                             ->build()
                             ->getDataUri();
@@ -697,7 +697,7 @@ class AdminContractController extends Controller
 
                     if (! empty($sepaQr)) {
                         $sepaQr = \Endroid\QrCode\Builder\Builder::create()
-                            ->data($sepaQr)
+                            ->data($sepaQr->__toString())
                             ->errorCorrectionLevel(ErrorCorrectionLevel::Medium)
                             ->build()
                             ->getDataUri();
