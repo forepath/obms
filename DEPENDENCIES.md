@@ -7,9 +7,9 @@
 | Name@Version | Licenses |
 | awobaz/compoships@2.4.1 | MIT |
 | bacon/bacon-qr-code@v3.0.1 | BSD-2-Clause |
-| barryvdh/laravel-dompdf@v2.2.0 | MIT |
+| barryvdh/laravel-dompdf@v3.1.1 | MIT |
 | beyondcode/laravel-er-diagram-generator@4.0.0 | MIT |
-| brick/math@0.12.3 | MIT |
+| brick/math@0.13.1 | MIT |
 | carbonphp/carbon-doctrine-types@2.1.0 | MIT |
 | clue/stream-filter@v1.7.0 | MIT |
 | composer/installers@v2.3.0 | MIT |
@@ -26,12 +26,13 @@
 | doctrine/instantiator@2.0.0 | MIT |
 | doctrine/lexer@3.0.1 | MIT |
 | doctrine/sql-formatter@1.5.2 | MIT |
-| dompdf/dompdf@v2.0.8 | LGPL-2.1 |
+| dompdf/dompdf@v3.1.0 | LGPL-2.1 |
+| dompdf/php-font-lib@1.0.1 | LGPL-2.1-or-later |
+| dompdf/php-svg-lib@1.0.0 | LGPL-3.0-or-later |
 | dragonmantank/cron-expression@v3.4.0 | MIT |
 | egulias/email-validator@4.0.4 | MIT |
 | endroid/qr-code@5.1.0 | MIT |
 | fakerphp/faker@v1.24.1 | MIT |
-| filp/whoops@2.18.3 | MIT |
 | firebase/php-jwt@v6.11.1 | BSD-3-Clause |
 | forepath/obms-composer-installer@v1.0.1 | Apache-2.0 |
 | forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
@@ -54,7 +55,7 @@
 | jms/metadata@2.8.0 | MIT |
 | jms/serializer@3.32.5 | MIT |
 | laravel/fortify@v1.27.0 | MIT |
-| laravel/framework@v11.45.1 | MIT |
+| laravel/framework@v12.20.0 | MIT |
 | laravel/horizon@v5.33.1 | MIT |
 | laravel/passport@v12.4.2 | MIT |
 | laravel/pint@v1.24.0 | MIT |
@@ -88,7 +89,6 @@
 | nette/schema@v1.3.2 | BSD-3-Clause, GPL-2.0-only, GPL-3.0-only |
 | nette/utils@v4.0.7 | BSD-3-Clause, GPL-2.0-only, GPL-3.0-only |
 | nikic/php-parser@v5.5.0 | BSD-3-Clause |
-| nunomaduro/collision@v8.5.0 | MIT |
 | nunomaduro/termwind@v2.3.1 | MIT |
 | nyholm/psr7@1.8.2 | MIT |
 | omnipay/common@v3.4.0 | MIT |
@@ -96,8 +96,6 @@
 | paragonie/random_compat@v9.99.100 | MIT |
 | phar-io/manifest@2.0.4 | BSD-3-Clause |
 | phar-io/version@3.2.1 | BSD-3-Clause |
-| phenx/php-font-lib@0.5.6 | LGPL-2.1-or-later |
-| phenx/php-svg-lib@0.5.4 | LGPL-3.0-or-later |
 | php-http/discovery@1.20.0 | MIT |
 | php-http/guzzle7-adapter@1.1.0 | MIT |
 | php-http/httplug@2.4.1 | MIT |
