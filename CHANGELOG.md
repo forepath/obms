@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/forepath/obms/compare/v1.0.2...v1.1.0) (2025-07-19)
+
+
+### Features
+
+* laravel 12 upgrade ([47c6a4c](https://github.com/forepath/obms/commit/47c6a4cd821da4dfb1552792380926c02c5d6986))
+
 ## [1.0.2](https://github.com/forepath/obms/compare/v1.0.1...v1.0.2) (2025-07-19)
 
 
