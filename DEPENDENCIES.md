@@ -33,11 +33,11 @@
 | fakerphp/faker@v1.24.1 | MIT |
 | filp/whoops@2.18.3 | MIT |
 | firebase/php-jwt@v6.11.1 | BSD-3-Clause |
-| forepath/obms-composer-installer@v1.0.0 | Apache-2.0 |
-| forepath/obms-module-sdk@v1.0.0 | Apache-2.0 |
+| forepath/obms-composer-installer@v1.0.1 | Apache-2.0 |
+| forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
 | forepath/obms-paymentgateway-paypal@v1.0.0 | Apache-2.0 |
 | forepath/obms-product-sample@v1.0.0 | Apache-2.0 |
-| forepath/obms-theme-aurora@v1.0.0 | Apache-2.0 |
+| forepath/obms-theme-aurora@v1.0.3 | Apache-2.0 |
 | fruitcake/php-cors@v1.3.0 | MIT |
 | goetas-webservices/xsd2php-runtime@v0.2.17 | MIT |
 | graham-campbell/result-type@v1.1.3 | MIT |
@@ -59,7 +59,7 @@
 | laravel/passport@v12.4.2 | MIT |
 | laravel/pint@v1.24.0 | MIT |
 | laravel/prompts@v0.3.6 | MIT |
-| laravel/pulse@v1.4.2 | MIT |
+| laravel/pulse@v1.4.3 | MIT |
 | laravel/sail@v1.43.1 | MIT |
 | laravel/sanctum@v4.1.2 | MIT |
 | laravel/serializable-closure@v2.0.4 | MIT |
