@@ -1766,16 +1766,16 @@
         },
         {
             "name": "forepath/obms-composer-installer",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-composer-installer.git",
-                "reference": "fd786d62ea64530fc26d66789bb5978fd71fafcc"
+                "reference": "a9a83a5a7d466b7b3058e37d0c0a4c621d970279"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-composer-installer/zipball/fd786d62ea64530fc26d66789bb5978fd71fafcc",
-                "reference": "fd786d62ea64530fc26d66789bb5978fd71fafcc",
+                "url": "https://api.github.com/repos/forepath/obms-composer-installer/zipball/a9a83a5a7d466b7b3058e37d0c0a4c621d970279",
+                "reference": "a9a83a5a7d466b7b3058e37d0c0a4c621d970279",
                 "shasum": ""
             },
             "require": {
@@ -1812,24 +1812,24 @@
                 "issues": "https://github.com/forepath/obms-composer-installer/issues",
                 "source": "https://github.com/forepath/obms-composer-installer"
             },
-            "time": "2025-07-17T16:16:30+00:00"
+            "time": "2025-07-17T17:12:50+00:00"
         },
         {
             "name": "forepath/obms-module-sdk",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-module-sdk.git",
-                "reference": "f23589dc1bcde50e28c3e498d41c34e44a16d3bc"
+                "reference": "c098920629689ce03aa00e7fad853d3ec1ab3eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-module-sdk/zipball/f23589dc1bcde50e28c3e498d41c34e44a16d3bc",
-                "reference": "f23589dc1bcde50e28c3e498d41c34e44a16d3bc",
+                "url": "https://api.github.com/repos/forepath/obms-module-sdk/zipball/c098920629689ce03aa00e7fad853d3ec1ab3eaf",
+                "reference": "c098920629689ce03aa00e7fad853d3ec1ab3eaf",
                 "shasum": ""
             },
             "require": {
-                "forepath/obms": "*",
+                "forepath/obms": "^1.0",
                 "php": "^8.2"
             },
             "require-dev": {
@@ -1858,7 +1858,7 @@
                 "issues": "https://github.com/forepath/obms-module-sdk/issues",
                 "source": "https://github.com/forepath/obms-module-sdk"
             },
-            "time": "2025-07-17T16:33:03+00:00"
+            "time": "2025-07-17T17:11:57+00:00"
         },
         {
             "name": "forepath/obms-paymentgateway-paypal",
@@ -1962,16 +1962,16 @@
         },
         {
             "name": "forepath/obms-theme-aurora",
-            "version": "v1.0.0",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-theme-aurora.git",
-                "reference": "03f31273a597517e7677f9b96cba19f7c447389c"
+                "reference": "00148970be6603fc08c9053bd6b4a9468cd5fbcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/03f31273a597517e7677f9b96cba19f7c447389c",
-                "reference": "03f31273a597517e7677f9b96cba19f7c447389c",
+                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/00148970be6603fc08c9053bd6b4a9468cd5fbcd",
+                "reference": "00148970be6603fc08c9053bd6b4a9468cd5fbcd",
                 "shasum": ""
             },
             "require": {
@@ -2001,7 +2001,7 @@
                 "issues": "https://github.com/forepath/obms-theme-aurora/issues",
                 "source": "https://github.com/forepath/obms-theme-aurora"
             },
-            "time": "2025-07-17T16:50:15+00:00"
+            "time": "2025-07-19T13:31:47+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -3601,16 +3601,16 @@
         },
         {
             "name": "laravel/pulse",
-            "version": "v1.4.2",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pulse.git",
-                "reference": "73c349777e09893a68d747bb6ae87e54eb5e5aec"
+                "reference": "8c57f30aa6e094c138cd191314fe060d60773c14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pulse/zipball/73c349777e09893a68d747bb6ae87e54eb5e5aec",
-                "reference": "73c349777e09893a68d747bb6ae87e54eb5e5aec",
+                "url": "https://api.github.com/repos/laravel/pulse/zipball/8c57f30aa6e094c138cd191314fe060d60773c14",
+                "reference": "8c57f30aa6e094c138cd191314fe060d60773c14",
                 "shasum": ""
             },
             "require": {
@@ -3629,7 +3629,7 @@
                 "illuminate/routing": "^10.48.4|^11.0.8|^12.0",
                 "illuminate/support": "^10.48.4|^11.0.8|^12.0",
                 "illuminate/view": "^10.48.4|^11.0.8|^12.0",
-                "livewire/livewire": "^3.4.9",
+                "livewire/livewire": "^3.6.4",
                 "nesbot/carbon": "^2.67|^3.0",
                 "php": "^8.1",
                 "symfony/console": "^6.0|^7.0"
@@ -3684,7 +3684,7 @@
                 "issues": "https://github.com/laravel/pulse/issues",
                 "source": "https://github.com/laravel/pulse"
             },
-            "time": "2025-05-19T13:12:28+00:00"
+            "time": "2025-07-18T15:54:11+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -14143,7 +14143,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -14159,6 +14159,6 @@
         "ext-gd": "*",
         "ext-xml": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
