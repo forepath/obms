@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1](https://github.com/forepath/obms/compare/v1.1.0...v1.1.1) (2025-07-19)
+
+
+### Bug Fixes
+
+* theme color default fallbacks ([d372fc2](https://github.com/forepath/obms/commit/d372fc22e35b33b5f11d3cb611b838e9ca71878f))
+
 ## [1.1.0](https://github.com/forepath/obms/compare/v1.0.2...v1.1.0) (2025-07-19)
 
 
