@@ -9,6 +9,7 @@ use App\Models\Content\Page;
 use App\Models\Shop\Configurator\ShopConfiguratorCategory;
 use App\Models\Shop\Configurator\ShopConfiguratorForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App as OBMS;
 use Illuminate\Support\Facades\Route;
 use OBMS\ModuleSDK\Products\Product;
 
@@ -149,7 +150,7 @@ Route::middleware([
             })->reject(function ($handler) {
                 return !$handler->capabilities->contains('service') || !$handler->instance->ui()->customer;
             })->each(function ($handler) {
-                App::bind(Product::class, function () use ($handler) {
+                OBMS::bind(Product::class, function () use ($handler) {
                     return $handler->instance;
                 });
 
@@ -475,7 +476,7 @@ Route::middleware([
         })->reject(function ($handler) {
             return !$handler->capabilities->contains('service') || !$handler->instance->ui()->admin;
         })->each(function ($handler) {
-            App::bind(Product::class, function () use ($handler) {
+            OBMS::bind(Product::class, function () use ($handler) {
                 return $handler->instance;
             });
 
