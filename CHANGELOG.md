@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2](https://github.com/forepath/obms/compare/v1.1.1...v1.1.2) (2025-08-08)
+
+
+### Bug Fixes
+
+* theme appearance ([658e0ff](https://github.com/forepath/obms/commit/658e0ff292184ff1750ce0546293801d8e162ccb))
+
 ## [1.1.1](https://github.com/forepath/obms/compare/v1.1.0...v1.1.1) (2025-07-19)
 
 
