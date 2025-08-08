@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.3](https://github.com/forepath/obms/compare/v1.1.2...v1.1.3) (2025-08-08)
+
+
+### Bug Fixes
+
+* app facade availability ([8e8c2b2](https://github.com/forepath/obms/commit/8e8c2b2375bda9f6988b116a997a0418fb0db008))
+
 ## [1.1.2](https://github.com/forepath/obms/compare/v1.1.1...v1.1.2) (2025-08-08)
 
 
