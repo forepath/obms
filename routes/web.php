@@ -290,6 +290,8 @@ Route::middleware([
         Route::get('/invoices/customers', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_index'])->name('admin.invoices.customers');
         Route::get('/invoices/customers/list/{user_id}', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_list'])->name('admin.invoices.customers.list');
         Route::get('/invoices/customers/list', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_list'])->name('admin.invoices.customers.list');
+        Route::get('/invoices/customers/search/{user_id}', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_search'])->name('admin.invoices.customers.search');
+        Route::get('/invoices/customers/search', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_search'])->name('admin.invoices.customers.search');
         Route::post('/invoices/customers/add', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_add'])->name('admin.invoices.customers.add');
         Route::post('/invoices/customers/{id}/update', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_update'])->name('admin.invoices.customers.update');
         Route::get('/invoices/customers/{id}/delete', [App\Http\Controllers\AdminInvoiceCustomerController::class, 'invoice_delete'])->name('admin.invoices.customers.delete');
@@ -310,6 +312,8 @@ Route::middleware([
         Route::get('/invoices/suppliers', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_index'])->name('admin.invoices.suppliers');
         Route::get('/invoices/suppliers/list/{user_id}', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_list'])->name('admin.invoices.suppliers.list');
         Route::get('/invoices/suppliers/list', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_list'])->name('admin.invoices.suppliers.list');
+        Route::get('/invoices/suppliers/search/{user_id}', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_search'])->name('admin.invoices.suppliers.search');
+        Route::get('/invoices/suppliers/search', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_search'])->name('admin.invoices.suppliers.search');
         Route::post('/invoices/suppliers/add', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_add'])->name('admin.invoices.suppliers.add');
         Route::post('/invoices/suppliers/{id}/update', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_update'])->name('admin.invoices.suppliers.update');
         Route::get('/invoices/suppliers/{id}/delete', [App\Http\Controllers\AdminInvoiceSupplierController::class, 'invoice_delete'])->name('admin.invoices.suppliers.delete');
@@ -336,6 +340,8 @@ Route::middleware([
         Route::get('/contracts', [App\Http\Controllers\AdminContractController::class, 'contract_index'])->name('admin.contracts');
         Route::get('/contracts/list/{user_id}', [App\Http\Controllers\AdminContractController::class, 'contract_list'])->name('admin.contracts.list.extended');
         Route::get('/contracts/list', [App\Http\Controllers\AdminContractController::class, 'contract_list'])->name('admin.contracts.list');
+        Route::get('/contracts/search/{user_id}', [App\Http\Controllers\AdminContractController::class, 'contract_search'])->name('admin.contracts.search.extended');
+        Route::get('/contracts/search', [App\Http\Controllers\AdminContractController::class, 'contract_search'])->name('admin.contracts.search');
         Route::post('/contracts/add', [App\Http\Controllers\AdminContractController::class, 'contract_add'])->name('admin.contracts.add');
         Route::post('/contracts/{id}/update', [App\Http\Controllers\AdminContractController::class, 'contract_update'])->name('admin.contracts.update');
         Route::get('/contracts/{id}/delete', [App\Http\Controllers\AdminContractController::class, 'contract_delete'])->name('admin.contracts.delete');
@@ -357,6 +363,7 @@ Route::middleware([
 
         Route::get('/customers', [App\Http\Controllers\AdminCustomerController::class, 'customer_index'])->name('admin.customers');
         Route::get('/customers/list', [App\Http\Controllers\AdminCustomerController::class, 'customer_list'])->name('admin.customers.list');
+        Route::get('/customers/search', [App\Http\Controllers\AdminCustomerController::class, 'customer_search'])->name('admin.customers.search');
         Route::post('/customers/create', [App\Http\Controllers\AdminCustomerController::class, 'customer_create'])->name('admin.customers.create');
         Route::get('/customers/{user_id}', [App\Http\Controllers\AdminCustomerController::class, 'customer_profile_index'])->name('admin.customers.profile');
         Route::get('/customers/{user_id}/twofactor/disable', [App\Http\Controllers\AdminCustomerController::class, 'customer_profile_2fa_disable'])->name('admin.customers.profile.2fa.disable');
@@ -390,6 +397,7 @@ Route::middleware([
 
         Route::get('/suppliers', [App\Http\Controllers\AdminSupplierController::class, 'supplier_index'])->name('admin.suppliers');
         Route::get('/suppliers/list', [App\Http\Controllers\AdminSupplierController::class, 'supplier_list'])->name('admin.suppliers.list');
+        Route::get('/suppliers/search', [App\Http\Controllers\AdminSupplierController::class, 'supplier_search'])->name('admin.suppliers.search');
         Route::post('/suppliers/create', [App\Http\Controllers\AdminSupplierController::class, 'supplier_create'])->name('admin.suppliers.create');
         Route::get('/suppliers/{user_id}', [App\Http\Controllers\AdminSupplierController::class, 'supplier_profile_index'])->name('admin.suppliers.profile');
         Route::post('/suppliers/{user_id}/update', [App\Http\Controllers\AdminSupplierController::class, 'supplier_profile_update'])->name('admin.suppliers.profile.update');

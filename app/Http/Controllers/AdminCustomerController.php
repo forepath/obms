@@ -17,6 +17,7 @@ use App\Models\Profile\ProfileEmail;
 use App\Models\Profile\ProfilePhone;
 use App\Models\User;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
@@ -111,6 +112,33 @@ class AdminCustomerController extends Controller
                     ];
                 }),
         ]);
+    }
+
+    /**
+     * Search customers.
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function customer_search(Request $request): JsonResponse
+    {
+        try {
+            return response()->json(
+                User::search($request->term)
+                    ->where('role', 'customer')
+                    ->get()
+                    ->transform(function (User $user) {
+                        return [
+                            'label' => $user->number,
+                            'value' => $user->id,
+                        ];
+                    })
+                    ->toArray()
+            );
+        } catch (Exception $e) {
+            return response()->json([]);
+        }
     }
 
     /**

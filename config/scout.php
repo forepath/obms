@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+use App\Models\Accounting\Contract\Contract;
+use App\Models\Accounting\Invoice\Invoice;
+use App\Models\User;
 use Illuminate\Support\Str;
 
 return [
@@ -42,7 +45,20 @@ return [
     'meilisearch' => [
         'host'           => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key'            => env('MEILISEARCH_KEY'),
-        'index-settings' => [],
+        'index-settings' => [
+            User::class => [
+                'filterableAttributes' => ['role', '__soft_deleted'],
+                'sortableAttributes'   => ['created_at', 'number'],
+            ],
+            Contract::class => [
+                'filterableAttributes' => ['user_id', '__soft_deleted'],
+                'sortableAttributes'   => ['created_at', 'number'],
+            ],
+            Invoice::class => [
+                'filterableAttributes' => ['user_id', '__soft_deleted'],
+                'sortableAttributes'   => ['created_at', 'number'],
+            ],
+        ],
     ],
 
     'tenants' => [
