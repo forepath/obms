@@ -1082,7 +1082,7 @@ class AdminSupportController extends Controller
                 ->get()
                 ->transform(function (SupportCategory $category) {
                     $edit = '
-<a class="btn btn-warning btn-sm w-100" data-toggle="modal" data-target="#edit' . $category->id . '" data-type="edit" data-category="' . $category->id . '" data-table="#category-users-' . $category->id . '"><i class="bi bi-pencil-square"></i></a>
+<a class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit' . $category->id . '" data-type="edit" data-category="' . $category->id . '" data-table="#category-users-' . $category->id . '"><i class="bi bi-pencil-square"></i></a>
 <div class="modal fade" id="edit' . $category->id . '" tabindex="-1" aria-labelledby="edit' . $category->id . 'Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
