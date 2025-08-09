@@ -249,10 +249,10 @@ class AdminInvoiceSupplierController extends Controller
             return response()->json(
                 $query
                     ->get()
-                    ->transform(function (User $user) {
+                    ->transform(function (Invoice $invoice) {
                         return [
-                            'label' => $user->number,
-                            'value' => $user->id,
+                            'label' => $invoice->number . ($invoice->user ? ' (' . $invoice->user->realName . ')' : ''),
+                            'value' => $invoice->id,
                         ];
                     })
                     ->toArray()

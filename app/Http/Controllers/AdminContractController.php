@@ -227,10 +227,10 @@ class AdminContractController extends Controller
             return response()->json(
                 $query
                     ->get()
-                    ->transform(function (User $user) {
+                    ->transform(function (Contract $contract) {
                         return [
-                            'label' => $user->number,
-                            'value' => $user->id,
+                            'label' => $contract->number . ($contract->user ? ' (' . $contract->user->realName . ')' : ''),
+                            'value' => $contract->id,
                         ];
                     })
                     ->toArray()

@@ -131,7 +131,7 @@ class AdminSupplierController extends Controller
                     ->get()
                     ->transform(function (User $user) {
                         return [
-                            'label' => $user->number,
+                            'label' => $user->number . ' (' . $user->realName . ')',
                             'value' => $user->id,
                         ];
                     })
