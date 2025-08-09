@@ -29,7 +29,7 @@ class IdentifyAdminProductLists
     {
         $results = [];
 
-        $products = Products::list()->reject(function ($handler) {
+        Products::list()->reject(function ($handler) {
             return !$handler->ui()->admin;
         })->each(function ($handler) use (&$results) {
             $results[] = (object) [

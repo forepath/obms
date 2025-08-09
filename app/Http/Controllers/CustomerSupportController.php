@@ -201,7 +201,7 @@ class CustomerSupportController extends Controller
     public function support_create(Request $request): RedirectResponse
     {
         Validator::make($request->toArray(), [
-            'category_id' => ['required', 'integer'],
+            'category_id' => ['nullable', 'integer'],
             'subject'     => ['required', 'string'],
             'priority'    => ['required', 'string'],
             'message'     => ['required', 'string'],

@@ -71,7 +71,13 @@ class AdminSupportController extends Controller
                 })
                 ->orWhere('category_id', '=', 0)
                 ->orWhereNull('category_id');
-        })->where('category_id', '=', $request->category);
+        });
+
+        if ($request->category) {
+            $query = $query->where('category_id', '=', $request->category);
+        } else {
+            $query = $query->whereNull('category_id');
+        }
 
         switch ($request->type) {
             case 'open':
@@ -678,7 +684,7 @@ class AdminSupportController extends Controller
     {
         Validator::make($request->toArray(), [
             'ticket_id'   => ['required', 'integer'],
-            'category_id' => ['required', 'integer'],
+            'category_id' => ['nullable', 'integer'],
         ])->validate();
 
         if (
@@ -891,7 +897,7 @@ class AdminSupportController extends Controller
                 ->exists()
         ) {
             /* @var SupportTicket|null $ticket */
-            if (! empty($ticket = SupportRunHelper::nextTicket($request->category ?? null))) {
+            if (! empty($ticket = SupportRunHelper::nextTicket($request->category ? (int) $request->category : null))) {
                 /* @var SupportRun|null $run */
                 $run = SupportRun::create([
                     'category_id' => $request->category ?? null,
