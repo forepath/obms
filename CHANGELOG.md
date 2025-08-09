@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/forepath/obms/compare/v1.2.0...v1.3.0) (2025-08-09)
+
+
+### Features
+
+* notification indicators ([#8](https://github.com/forepath/obms/issues/8)) ([48b90fa](https://github.com/forepath/obms/commit/48b90fa99978cd9bd8b350e45b59f6dc70a808ad))
+
 ## [1.2.0](https://github.com/forepath/obms/compare/v1.1.3...v1.2.0) (2025-08-09)
 
 
