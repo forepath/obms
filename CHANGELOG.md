@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/forepath/obms/compare/v1.1.3...v1.2.0) (2025-08-09)
+
+
+### Features
+
+* object id search ([177644b](https://github.com/forepath/obms/commit/177644bf1428f85d35adafd68d8764c8c9a2871e))
+
 ## [1.1.3](https://github.com/forepath/obms/compare/v1.1.2...v1.1.3) (2025-08-08)
 
 
