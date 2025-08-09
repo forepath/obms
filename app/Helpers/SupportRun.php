@@ -35,7 +35,10 @@ class SupportRun
                 ! empty($category = SupportCategory::byId($category_id)) &&
                 $category->assignments->where('user_id', '=', Auth::id())
             ) {
-                return SupportTicket::where('category_id', '=', $category_id)
+                return SupportTicket::where(function (Builder $builder) {
+                    return $builder->where('category_id', '=', 0)
+                        ->orWhereNull('category_id');
+                })
                     ->where('status', '=', 'open')
                     ->whereDoesntHave('history', function (Builder $builder) {
                         return $builder->where('user_id', '=', Auth::id())
@@ -58,7 +61,10 @@ class SupportRun
                     ->orderBy('created_at')
                     ->first();
             } elseif ($category_id === 0) {
-                return SupportTicket::where('category_id', '=', 0)
+                return SupportTicket::where(function (Builder $builder) {
+                    return $builder->where('category_id', '=', 0)
+                        ->orWhereNull('category_id');
+                })
                     ->where('status', '=', 'open')
                     ->whereDoesntHave('history', function (Builder $builder) {
                         return $builder->where('user_id', '=', Auth::id())

@@ -7,7 +7,9 @@ namespace App\Http;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\IdentifyAdminProductLists;
+use App\Http\Middleware\IdentifyAdminStatus;
 use App\Http\Middleware\IdentifyCustomerProductLists;
+use App\Http\Middleware\IdentifyCustomerStatus;
 use App\Http\Middleware\IdentifyTenant;
 use App\Http\Middleware\InjectNavigateables;
 use App\Http\Middleware\InjectShopCategoryOrProduct;
@@ -112,5 +114,7 @@ class Kernel extends HttpKernel
         'shop.categoryOrProduct' => InjectShopCategoryOrProduct::class,
         'products.admin'         => IdentifyAdminProductLists::class,
         'products.customer'      => IdentifyCustomerProductLists::class,
+        'status.admin'           => IdentifyAdminStatus::class,
+        'status.customer'        => IdentifyCustomerStatus::class,
     ];
 }
