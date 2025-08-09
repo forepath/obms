@@ -38,7 +38,7 @@
 | forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
 | forepath/obms-paymentgateway-paypal@v1.0.0 | Apache-2.0 |
 | forepath/obms-product-sample@v1.0.0 | Apache-2.0 |
-| forepath/obms-theme-aurora@v1.2.1 | Apache-2.0 |
+| forepath/obms-theme-aurora@v1.3.3 | Apache-2.0 |
 | fruitcake/php-cors@v1.3.0 | MIT |
 | goetas-webservices/xsd2php-runtime@v0.2.17 | MIT |
 | graham-campbell/result-type@v1.1.3 | MIT |
