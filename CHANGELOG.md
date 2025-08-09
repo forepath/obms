@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1](https://github.com/forepath/obms/compare/v1.3.0...v1.3.1) (2025-08-09)
+
+
+### Bug Fixes
+
+* table action buttons width ([0d7363f](https://github.com/forepath/obms/commit/0d7363fd422f84c99fbb30298e2b471284cbe1d1))
+
 ## [1.3.0](https://github.com/forepath/obms/compare/v1.2.0...v1.3.0) (2025-08-09)
 
 
