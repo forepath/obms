@@ -75,6 +75,8 @@ class AdminSupportController extends Controller
 
         if ($request->category) {
             $query = $query->where('category_id', '=', $request->category);
+        } else {
+            $query = $query->whereNull('category_id');
         }
 
         switch ($request->type) {
@@ -895,7 +897,7 @@ class AdminSupportController extends Controller
                 ->exists()
         ) {
             /* @var SupportTicket|null $ticket */
-            if (! empty($ticket = SupportRunHelper::nextTicket($request->category ?? null))) {
+            if (! empty($ticket = SupportRunHelper::nextTicket($request->category ? (int) $request->category : null))) {
                 /* @var SupportRun|null $run */
                 $run = SupportRun::create([
                     'category_id' => $request->category ?? null,

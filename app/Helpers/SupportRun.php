@@ -6,6 +6,7 @@ namespace App\Helpers;
 
 use App\Models\Support\Category\SupportCategory;
 use App\Models\Support\SupportTicket;
+use App\Models\Support\SupportTicketMessage;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
@@ -32,13 +33,10 @@ class SupportRun
         if (! empty($category_id)) {
             if (
                 $category_id > 0 &&
-                ! empty($category = SupportCategory::byId($category_id)) &&
+                ! empty($category = SupportCategory::where('id', '=', $category_id)->first()) &&
                 $category->assignments->where('user_id', '=', Auth::id())
             ) {
-                return SupportTicket::where(function (Builder $builder) {
-                    return $builder->where('category_id', '=', 0)
-                        ->orWhereNull('category_id');
-                })
+                $tickets = SupportTicket::where('category_id', '=', $category->id)
                     ->where('status', '=', 'open')
                     ->whereDoesntHave('history', function (Builder $builder) {
                         return $builder->where('user_id', '=', Auth::id())
@@ -49,19 +47,12 @@ class SupportRun
                     ->whereDoesntHave('run', function (Builder $builder) {
                         return $builder->whereNull('ended_at');
                     })
-                    ->whereHas('messages', function (Builder $builder) {
-                        return $builder
-                            ->latest()
-                            ->whereHas('user', function (Builder $builder) {
-                                return $builder->where('role', '=', 'customer');
-                            });
-                    })
                     ->orderByDesc('escalated')
                     ->orderBy('hold')
                     ->orderBy('created_at')
-                    ->first();
+                    ->get();
             } elseif ($category_id === 0) {
-                return SupportTicket::where(function (Builder $builder) {
+                $tickets = SupportTicket::where(function (Builder $builder) {
                     return $builder->where('category_id', '=', 0)
                         ->orWhereNull('category_id');
                 })
@@ -75,20 +66,13 @@ class SupportRun
                     ->whereDoesntHave('run', function (Builder $builder) {
                         return $builder->whereNull('ended_at');
                     })
-                    ->whereHas('messages', function (Builder $builder) {
-                        return $builder
-                            ->latest()
-                            ->whereHas('user', function (Builder $builder) {
-                                return $builder->where('role', '=', 'customer');
-                            });
-                    })
                     ->orderByDesc('escalated')
                     ->orderBy('hold')
                     ->orderBy('created_at')
-                    ->first();
+                    ->get();
             }
         } else {
-            return SupportTicket::where(function (Builder $builder) {
+            $tickets = SupportTicket::where(function (Builder $builder) {
                 return $builder->where('category_id', '=', 0)
                         ->orWhereNull('category_id')
                         ->orWhereHas('category', function (Builder $builder) {
@@ -107,19 +91,25 @@ class SupportRun
                 ->whereDoesntHave('run', function (Builder $builder) {
                     return $builder->whereNull('ended_at');
                 })
-                ->whereHas('messages', function (Builder $builder) {
-                    return $builder
-                        ->latest()
-                        ->whereHas('user', function (Builder $builder) {
-                            return $builder->where('role', '=', 'customer');
-                        });
-                })
                 ->orderByDesc('escalated')
                 ->orderBy('hold')
                 ->orderBy('created_at')
-                ->first();
+                ->get();
         }
 
-        return null;
+        if (empty($tickets)) {
+            return null;
+        }
+
+        return $tickets->filter(function (SupportTicket $ticket) {
+            $lastMessage = $ticket->messages->filter(function (SupportTicketMessage $message) {
+                return !$message->note;
+            })->last();
+
+            return !in_array($lastMessage->user?->role, [
+                'admin',
+                'employee',
+            ]);
+        })->first();
     }
 }
