@@ -82,7 +82,7 @@ class AdminSettingsController extends Controller
                 ->get()
                 ->transform(function (Setting $setting) {
                     $edit = '
-<a class="btn btn-warning btn-sm w-100" data-toggle="modal" data-target="#edit' . $setting->id . '" data-type="edit" data-category="' . $setting->id . '" data-table="#settings-' . $setting->id . '"><i class="bi bi-pencil-square"></i></a>
+<a class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit' . $setting->id . '" data-type="edit" data-category="' . $setting->id . '" data-table="#settings-' . $setting->id . '"><i class="bi bi-pencil-square"></i></a>
 <div class="modal fade" id="edit' . $setting->id . '" tabindex="-1" aria-labelledby="edit' . $setting->id . 'Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
