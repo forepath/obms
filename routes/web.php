@@ -67,6 +67,7 @@ Route::middleware([
         'middleware' => [
             'role.customer',
             'products.customer',
+            'status.customer',
         ],
     ], function () {
         Route::get('/accept', [App\Http\Controllers\CustomerDashboardController::class, 'accept'])->name('customer.accept');
@@ -179,6 +180,7 @@ Route::middleware([
         'middleware' => [
             'role.employee',
             'products.admin',
+            'status.admin',
         ],
     ], function () {
         Route::get('/home', [App\Http\Controllers\AdminDashboardController::class, 'index'])->name('admin.home');
@@ -526,6 +528,7 @@ try {
     Route::group([
         'middleware' => [
             'products.customer',
+            'status.customer',
         ],
     ], function () {
         Page::query()->each(function (Page $page) {
@@ -540,6 +543,7 @@ Route::group([
     'middleware' => [
         'shop.categoryOrProduct',
         'products.customer',
+        'status.customer',
     ],
 ], function () {
     Route::get('/shop', [App\Http\Controllers\CustomerShopController::class, 'render_category'])->name('public.shop');

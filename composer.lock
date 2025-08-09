@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11227b59f860e2dd590368b44e4652b8",
+    "content-hash": "defde7552a959aa4b07010a9b742ee3b",
     "packages": [
         {
             "name": "awobaz/compoships",
@@ -2055,16 +2055,16 @@
         },
         {
             "name": "forepath/obms-theme-aurora",
-            "version": "v1.2.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-theme-aurora.git",
-                "reference": "f1ff227a81818b7d71c495ce70838e8b03791aa0"
+                "reference": "0c1685acb5d3b97dbb3604a353c4341c08b1e1d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/f1ff227a81818b7d71c495ce70838e8b03791aa0",
-                "reference": "f1ff227a81818b7d71c495ce70838e8b03791aa0",
+                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/0c1685acb5d3b97dbb3604a353c4341c08b1e1d1",
+                "reference": "0c1685acb5d3b97dbb3604a353c4341c08b1e1d1",
                 "shasum": ""
             },
             "require": {
@@ -2094,7 +2094,7 @@
                 "issues": "https://github.com/forepath/obms-theme-aurora/issues",
                 "source": "https://github.com/forepath/obms-theme-aurora"
             },
-            "time": "2025-08-09T08:16:15+00:00"
+            "time": "2025-08-09T20:05:28+00:00"
         },
         {
             "name": "fruitcake/php-cors",
