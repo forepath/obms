@@ -232,6 +232,38 @@ class AdminInvoiceCustomerController extends Controller
     }
 
     /**
+     * Search invoices.
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function invoice_search(Request $request): JsonResponse
+    {
+        $query = Invoice::search($request->term);
+
+        if (! empty($request->user_id)) {
+            $query = $query->where('user_id', $request->user_id);
+        }
+
+        try {
+            return response()->json(
+                $query
+                    ->get()
+                    ->transform(function (Invoice $invoice) {
+                        return [
+                            'label' => $invoice->number . ($invoice->user ? ' (' . $invoice->user->realName . ')' : ''),
+                            'value' => $invoice->id,
+                        ];
+                    })
+                    ->toArray()
+            );
+        } catch (Exception $e) {
+            return response()->json([]);
+        }
+    }
+
+    /**
      * Create a new invoice.
      *
      * @param Request $request

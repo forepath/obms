@@ -58,6 +58,8 @@ class IdentifyTenant
 
             Config::set('cache.stores.redis.session.prefix', $tenant->redis_prefix ?? Config::get('cache.stores.redis.session.prefix'));
 
+            Config::set('scout.prefix', $tenant->scout_prefix ?? Config::get('scout.prefix'));
+
             $request->attributes->add(['tenant' => $tenant]);
 
             Setting::whereNotNull('value')

@@ -18,6 +18,7 @@ use App\Models\FileManager\File;
 use App\Models\ImapInbox;
 use App\Models\User;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
@@ -227,6 +228,38 @@ class AdminInvoiceSupplierController extends Controller
                     ];
                 }),
         ]);
+    }
+
+    /**
+     * Search invoices.
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function invoice_search(Request $request): JsonResponse
+    {
+        $query = Invoice::search($request->term);
+
+        if (! empty($request->user_id)) {
+            $query = $query->where('user_id', $request->user_id);
+        }
+
+        try {
+            return response()->json(
+                $query
+                    ->get()
+                    ->transform(function (Invoice $invoice) {
+                        return [
+                            'label' => $invoice->number . ($invoice->user ? ' (' . $invoice->user->realName . ')' : ''),
+                            'value' => $invoice->id,
+                        ];
+                    })
+                    ->toArray()
+            );
+        } catch (Exception $e) {
+            return response()->json([]);
+        }
     }
 
     /**

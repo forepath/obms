@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\DB;
  * @property bool          $database_strict
  * @property string        $database_engine
  * @property string        $redis_prefix
+ * @property string        $scout_prefix
  * @property Carbon        $created_at
  * @property Carbon        $updated_at
  * @property User|null     $user
@@ -92,6 +93,7 @@ class Tenant extends Model
         'database_password',
         'database_unix_socket',
         'redis_prefix',
+        'scout_prefix',
     ];
 
     /**

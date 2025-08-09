@@ -293,14 +293,15 @@ class AdminTenantController extends Controller
                 $user->role === 'customer'
             )
         ) {
-            $name     = config('database.tenants.prefix') . (! empty($request->user_id) ? $request->user_id : '0') . $tenant->id;
-            $password = Str::random();
+            $databaseName     = config('database.tenants.prefix') . (! empty($request->user_id) ? $request->user_id : '0') . $tenant->id;
+            $databasePassword = Str::random();
+            $searchIndexName  = config('scout.tenants.prefix') . (! empty($request->user_id) ? $request->user_id : '0') . $tenant->id;
 
-            DB::connection('base')->statement('CREATE DATABASE ' . $name);
+            DB::connection('base')->statement('CREATE DATABASE ' . $databaseName);
 
-            DB::connection('base')->statement('CREATE USER \'' . $name . '\'@\'%\' IDENTIFIED BY \'' . $password . '\'');
+            DB::connection('base')->statement('CREATE USER \'' . $databaseName . '\'@\'%\' IDENTIFIED BY \'' . $databasePassword . '\'');
 
-            DB::connection('base')->statement('GRANT ALL PRIVILEGES ON ' . $name . '.* TO \'' . $name . '\'@\'%\'');
+            DB::connection('base')->statement('GRANT ALL PRIVILEGES ON ' . $databaseName . '.* TO \'' . $databaseName . '\'@\'%\'');
 
             DB::connection('base')->statement('FLUSH PRIVILEGES');
 
@@ -309,9 +310,9 @@ class AdminTenantController extends Controller
                 'database_url'            => config('database.connections.mysql.url'),
                 'database_host'           => config('database.connections.mysql.host'),
                 'database_port'           => config('database.connections.mysql.port'),
-                'database_database'       => $name,
-                'database_username'       => $name,
-                'database_password'       => $password,
+                'database_database'       => $databaseName,
+                'database_username'       => $databaseName,
+                'database_password'       => $databasePassword,
                 'database_unix_socket'    => config('database.connections.mysql.unix_socket'),
                 'database_charset'        => config('database.connections.mysql.charset'),
                 'database_collation'      => config('database.connections.mysql.collation'),
@@ -319,10 +320,11 @@ class AdminTenantController extends Controller
                 'database_prefix_indexes' => config('database.connections.mysql.prefix_indexes'),
                 'database_strict'         => config('database.connections.mysql.strict'),
                 'database_engine'         => config('database.connections.mysql.engine'),
-                'redis_prefix'            => $name . '-',
+                'redis_prefix'            => $databaseName . '-',
+                'scout_prefix'            => $searchIndexName . '-',
             ]);
 
-            Config::set('database.connections.' . $name, [
+            Config::set('database.connections.' . $databaseName, [
                 'driver'           => $tenant->database_driver,
                 'url'              => $tenant->database_url,
                 'host'             => $tenant->database_host,
@@ -337,7 +339,6 @@ class AdminTenantController extends Controller
                 'prefix_indexes'   => $tenant->database_prefix_indexes ? '1' : '0',
                 'database_strict'  => $tenant->database_strict ? '1' : '0',
                 'database_engine'  => $tenant->database_engine,
-                'redis_prefix'     => $tenant->redis_prefix,
                 'options'          => extension_loaded('pdo_mysql') ? array_filter([
                     PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
                     PDO::ATTR_PERSISTENT   => true,
@@ -345,10 +346,10 @@ class AdminTenantController extends Controller
             ]);
 
             Artisan::call('migrate', [
-                '--database' => $name,
+                '--database' => $databaseName,
             ]);
 
-            DB::connection($name)->update('UPDATE settings SET value = ? WHERE setting = ?', [
+            DB::connection($databaseName)->update('UPDATE settings SET value = ? WHERE setting = ?', [
                 encrypt('https://' . $tenant->domain),
                 'app.url',
             ]);
@@ -405,7 +406,6 @@ class AdminTenantController extends Controller
                     'prefix_indexes'   => $tenant->database_prefix_indexes ? '1' : '0',
                     'database_strict'  => $tenant->database_strict ? '1' : '0',
                     'database_engine'  => $tenant->database_engine,
-                    'redis_prefix'     => $tenant->redis_prefix,
                     'options'          => extension_loaded('pdo_mysql') ? array_filter([
                         PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
                         PDO::ATTR_PERSISTENT   => true,

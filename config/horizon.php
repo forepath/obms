@@ -279,6 +279,16 @@ return [
                 'tries'     => 1,
                 'timeout'   => 3600,
             ],
+            'supervisor-10' => [
+                'connection' => 'redis',
+                'queue'      => [
+                    'scout',
+                ],
+                'balance'   => 'simple',
+                'processes' => 10,
+                'tries'     => 1,
+                'timeout'   => 3600,
+            ],
         ],
 
         'local' => [
@@ -366,6 +376,16 @@ return [
                 'connection' => 'redis',
                 'queue'      => [
                     'invoice_import',
+                ],
+                'balance'   => 'simple',
+                'processes' => 1,
+                'tries'     => 1,
+                'timeout'   => 3600,
+            ],
+            'supervisor-10' => [
+                'connection' => 'redis',
+                'queue'      => [
+                    'scout',
                 ],
                 'balance'   => 'simple',
                 'processes' => 1,

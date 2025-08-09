@@ -68,6 +68,8 @@ class TenantJob extends Job
 
             Config::set('cache.stores.redis.session.prefix', $tenant->redis_prefix ?? Config::get('cache.stores.redis.session.prefix'));
 
+            Config::set('scout.prefix', $tenant->scout_prefix ?? Config::get('scout.prefix'));
+
             $this->tenant_id     = (string) $tenant->id;
             $this->tenant_domain = $tenant->domain;
         } else {

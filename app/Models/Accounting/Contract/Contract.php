@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * Class Contract.
@@ -51,6 +52,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Contract extends Model
 {
     use SoftDeletes;
+    use Searchable;
 
     /**
      * The attributes that aren't mass assignable.
@@ -122,6 +124,28 @@ class Contract extends Model
     public function history(): HasMany
     {
         return $this->hasMany(ContractHistory::class, 'contract_id', 'id');
+    }
+
+    /**
+     * Get the name of the index associated with the model.
+     */
+    public function searchableAs(): string
+    {
+        return 'contracts_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray(): array
+    {
+        return [
+            ...$this->toArray(),
+            'number' => $this->number,
+            'user'   => $this->user?->toSearchableArray(),
+        ];
     }
 
     /**

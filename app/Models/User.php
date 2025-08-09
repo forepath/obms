@@ -32,6 +32,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Fortify\TwoFactorAuthenticationProvider;
 use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 /**
  * Class User.
@@ -84,6 +85,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
     use SoftDeletes;
     use TwoFactorAuthenticatable;
+    use Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -222,6 +224,28 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(Profile::class, 'user_id', 'id')
             ->orderByDesc('id');
+    }
+
+    /**
+     * Get the name of the index associated with the model.
+     */
+    public function searchableAs(): string
+    {
+        return 'users_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray(): array
+    {
+        return [
+            ...$this->toArray(),
+            'number' => $this->number,
+            // TODO: Add user meta
+        ];
     }
 
     /**

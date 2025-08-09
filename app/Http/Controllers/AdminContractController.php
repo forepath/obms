@@ -209,6 +209,38 @@ class AdminContractController extends Controller
     }
 
     /**
+     * Search contracts.
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function contract_search(Request $request): JsonResponse
+    {
+        $query = Contract::search($request->term);
+
+        if (! empty($request->user_id)) {
+            $query = $query->where('user_id', $request->user_id);
+        }
+
+        try {
+            return response()->json(
+                $query
+                    ->get()
+                    ->transform(function (Contract $contract) {
+                        return [
+                            'label' => $contract->number . ($contract->user ? ' (' . $contract->user->realName . ')' : ''),
+                            'value' => $contract->id,
+                        ];
+                    })
+                    ->toArray()
+            );
+        } catch (Exception $e) {
+            return response()->json([]);
+        }
+    }
+
+    /**
      * Create a new contract.
      *
      * @param Request $request
