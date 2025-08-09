@@ -38,7 +38,7 @@
 | forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
 | forepath/obms-paymentgateway-paypal@v1.0.0 | Apache-2.0 |
 | forepath/obms-product-sample@v1.0.0 | Apache-2.0 |
-| forepath/obms-theme-aurora@v1.1.0 | Apache-2.0 |
+| forepath/obms-theme-aurora@v1.2.1 | Apache-2.0 |
 | fruitcake/php-cors@v1.3.0 | MIT |
 | goetas-webservices/xsd2php-runtime@v0.2.17 | MIT |
 | graham-campbell/result-type@v1.1.3 | MIT |
@@ -51,6 +51,7 @@
 | horstoeko/stringmanagement@v1.0.12 | MIT |
 | horstoeko/zugferd@v1.0.115 | MIT |
 | horstoeko/zugferd-laravel@v1.0.5 | MIT |
+| http-interop/http-factory-guzzle@1.2.0 | MIT |
 | ignited/laravel-omnipay@3.7.0 | MIT |
 | jms/metadata@2.8.0 | MIT |
 | jms/serializer@3.32.5 | MIT |
@@ -63,6 +64,7 @@
 | laravel/pulse@v1.4.3 | MIT |
 | laravel/sail@v1.44.0 | MIT |
 | laravel/sanctum@v4.2.0 | MIT |
+| laravel/scout@v10.17.0 | MIT |
 | laravel/serializable-closure@v2.0.4 | MIT |
 | laravel/socialite@v5.23.0 | MIT |
 | laravel/tinker@v2.10.1 | MIT |
@@ -81,6 +83,7 @@
 | league/uri-interfaces@7.5.0 | MIT |
 | livewire/livewire@v3.6.4 | MIT |
 | masterminds/html5@2.10.0 | MIT |
+| meilisearch/meilisearch-php@v1.15.0 | MIT |
 | mockery/mockery@1.6.12 | BSD-3-Clause |
 | moneyphp/money@v4.7.1 | MIT |
 | monolog/monolog@3.9.0 | MIT |
@@ -112,7 +115,7 @@
 | phpunit/php-invoker@4.0.0 | BSD-3-Clause |
 | phpunit/php-text-template@3.0.1 | BSD-3-Clause |
 | phpunit/php-timer@6.0.0 | BSD-3-Clause |
-| phpunit/phpunit@10.5.48 | BSD-3-Clause |
+| phpunit/phpunit@10.5.49 | BSD-3-Clause |
 | pragmarx/google2fa@v8.0.3 | MIT |
 | psr/cache@3.0.0 | MIT |
 | psr/clock@1.0.0 | MIT |
