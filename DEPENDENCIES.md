@@ -22,7 +22,7 @@
 | doctrine/dbal@3.10.1 | MIT |
 | doctrine/deprecations@1.1.5 | MIT |
 | doctrine/event-manager@2.0.1 | MIT |
-| doctrine/inflector@2.0.10 | MIT |
+| doctrine/inflector@2.1.0 | MIT |
 | doctrine/instantiator@2.0.0 | MIT |
 | doctrine/lexer@3.0.1 | MIT |
 | doctrine/sql-formatter@1.5.2 | MIT |
@@ -38,7 +38,7 @@
 | forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
 | forepath/obms-paymentgateway-paypal@v1.0.0 | Apache-2.0 |
 | forepath/obms-product-sample@v1.0.0 | Apache-2.0 |
-| forepath/obms-theme-aurora@v1.3.3 | Apache-2.0 |
+| forepath/obms-theme-aurora@v1.3.4 | Apache-2.0 |
 | fruitcake/php-cors@v1.3.0 | MIT |
 | goetas-webservices/xsd2php-runtime@v0.2.17 | MIT |
 | graham-campbell/result-type@v1.1.3 | MIT |
@@ -56,7 +56,7 @@
 | jms/metadata@2.8.0 | MIT |
 | jms/serializer@3.32.5 | MIT |
 | laravel/fortify@v1.28.0 | MIT |
-| laravel/framework@v12.22.1 | MIT |
+| laravel/framework@v12.24.0 | MIT |
 | laravel/horizon@v5.33.2 | MIT |
 | laravel/passport@v12.4.2 | MIT |
 | laravel/pint@v1.24.0 | MIT |
@@ -91,7 +91,7 @@
 | nesbot/carbon@3.10.2 | MIT |
 | nette/schema@v1.3.2 | BSD-3-Clause, GPL-2.0-only, GPL-3.0-only |
 | nette/utils@v4.0.8 | BSD-3-Clause, GPL-2.0-only, GPL-3.0-only |
-| nikic/php-parser@v5.6.0 | BSD-3-Clause |
+| nikic/php-parser@v5.6.1 | BSD-3-Clause |
 | nunomaduro/termwind@v2.3.1 | MIT |
 | nyholm/psr7@1.8.2 | MIT |
 | omnipay/common@v3.4.0 | MIT |
@@ -115,7 +115,7 @@
 | phpunit/php-invoker@4.0.0 | BSD-3-Clause |
 | phpunit/php-text-template@3.0.1 | BSD-3-Clause |
 | phpunit/php-timer@6.0.0 | BSD-3-Clause |
-| phpunit/phpunit@10.5.49 | BSD-3-Clause |
+| phpunit/phpunit@10.5.52 | BSD-3-Clause |
 | pragmarx/google2fa@v8.0.3 | MIT |
 | psr/cache@3.0.0 | MIT |
 | psr/clock@1.0.0 | MIT |
@@ -151,7 +151,7 @@
 | sebastian/lines-of-code@2.0.2 | BSD-3-Clause |
 | sebastian/object-enumerator@5.0.0 | BSD-3-Clause |
 | sebastian/object-reflector@3.0.0 | BSD-3-Clause |
-| sebastian/recursion-context@5.0.0 | BSD-3-Clause |
+| sebastian/recursion-context@5.0.1 | BSD-3-Clause |
 | sebastian/type@4.0.0 | BSD-3-Clause |
 | sebastian/version@4.0.1 | BSD-3-Clause |
 | setasign/fpdf@1.8.6 | MIT |
@@ -188,6 +188,8 @@
 | symfony/polyfill-mbstring@v1.32.0 | MIT |
 | symfony/polyfill-php80@v1.32.0 | MIT |
 | symfony/polyfill-php83@v1.32.0 | MIT |
+| symfony/polyfill-php84@v1.32.0 | MIT |
+| symfony/polyfill-php85@v1.32.0 | MIT |
 | symfony/polyfill-uuid@v1.32.0 | MIT |
 | symfony/process@v7.3.0 | MIT |
 | symfony/psr-http-message-bridge@v7.3.0 | MIT |
@@ -205,7 +207,7 @@
 | vlucas/phpdotenv@v5.6.2 | BSD-3-Clause |
 | voku/portable-ascii@2.0.3 | MIT |
 | webmozart/assert@1.11.0 | MIT |
-| zircote/swagger-php@5.1.4 | Apache-2.0 |
+| zircote/swagger-php@5.3.0 | Apache-2.0 |
 
 ## Node (npm) Dependencies
 
