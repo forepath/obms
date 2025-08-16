@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2](https://github.com/forepath/obms/compare/v1.3.1...v1.3.2) (2025-08-16)
+
+
+### Bug Fixes
+
+* page acceptance checkbox labels ([78d26dd](https://github.com/forepath/obms/commit/78d26ddfebf0d105df4f8d1fa4f3397cfd9bdacc))
+
 ## [1.3.1](https://github.com/forepath/obms/compare/v1.3.0...v1.3.1) (2025-08-09)
 
 
