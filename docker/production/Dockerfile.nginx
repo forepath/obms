@@ -1,0 +1,16 @@
+FROM nginx:latest
+
+# Copy application
+COPY . /var/www/html
+
+# Copy nginx configuration
+COPY ./docker/production/nginx/default.conf /etc/nginx/conf.d/default.conf
+
+# Clean working directory
+RUN mkdir -p /var/www/html/storage/logs/ && \
+    chown -R www-data:www-data /var/www/html && \
+    rm -rf tests/ .git/ .github/ *.md && \
+    rm -rf vendor/*/test/ vendor/*/tests/*
+
+# Set working directory
+WORKDIR /var/www/html

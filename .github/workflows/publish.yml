@@ -108,6 +108,13 @@ jobs:
           docker tag ghcr.io/forepath/obms-worker:${{ github.ref_name }} ghcr.io/forepath/obms-worker:latest
           docker push ghcr.io/forepath/obms-worker:latest
 
+      - name: Build and push nginx image
+        run: |
+          docker build -t ghcr.io/forepath/obms-nginx:${{ github.ref_name }} -f docker/production/Dockerfile.nginx .
+          docker push ghcr.io/forepath/obms-nginx:${{ github.ref_name }}
+          docker tag ghcr.io/forepath/obms-nginx:${{ github.ref_name }} ghcr.io/forepath/obms-nginx:latest
+          docker push ghcr.io/forepath/obms-nginx:latest
+
   notify:
     runs-on: ubuntu-latest
     needs: publish
