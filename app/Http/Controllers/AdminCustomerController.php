@@ -292,8 +292,9 @@ class AdminCustomerController extends Controller
         ) {
             if ($user->email !== $request->email) {
                 Validator::make($request->toArray(), [
-                    'name'  => ['required', 'string', 'max:255'],
-                    'email' => ['required', 'email', 'confirmed'],
+                    'name'                   => ['required', 'string', 'max:255'],
+                    'email'                  => ['required', 'email', 'confirmed'],
+                    'suppress_welcome_email' => ['string', 'nullable'],
                 ])->validate();
 
                 $user->update([
@@ -301,10 +302,13 @@ class AdminCustomerController extends Controller
                     'email'             => $request->email,
                     'email_verified_at' => null,
                 ]);
+
+                if (! (bool) $request->suppress_welcome_email) {
+                    $user->sendEmailVerificationNotification();
+                }
             } else {
                 Validator::make($request->toArray(), [
-                    'name'  => ['required', 'string', 'max:255'],
-                    'email' => ['required', 'email'],
+                    'name' => ['required', 'string', 'max:255'],
                 ])->validate();
 
                 $user->update([
