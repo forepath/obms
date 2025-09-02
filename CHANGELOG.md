@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.1](https://github.com/forepath/obms/compare/v1.4.0...v1.4.1) (2025-09-02)
+
+
+### Bug Fixes
+
+* str_contains haystack value fallback ([fdc6aab](https://github.com/forepath/obms/commit/fdc6aabf64111e402051ca63dfa537958bb26e27))
+
 ## [1.4.0](https://github.com/forepath/obms/compare/v1.3.2...v1.4.0) (2025-09-02)
 
 
