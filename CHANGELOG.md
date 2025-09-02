@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.2](https://github.com/forepath/obms/compare/v1.4.1...v1.4.2) (2025-09-02)
+
+
+### Bug Fixes
+
+* remove symlink before docker build ([7cd1266](https://github.com/forepath/obms/commit/7cd12665773eeb8edff57aa05600151409558ed1))
+
 ## [1.4.1](https://github.com/forepath/obms/compare/v1.4.0...v1.4.1) (2025-09-02)
 
 
