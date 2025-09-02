@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/forepath/obms/compare/v1.4.3...v1.5.0) (2025-09-02)
+
+
+### Features
+
+* custom nginx image ([4c0b3a1](https://github.com/forepath/obms/commit/4c0b3a1ea7bc6a53df1ba38fe0eb6dce31387e91))
+
 ## [1.4.3](https://github.com/forepath/obms/compare/v1.4.2...v1.4.3) (2025-09-02)
 
 
