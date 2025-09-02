@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.2](https://github.com/forepath/obms/compare/v1.5.1...v1.5.2) (2025-09-02)
+
+
+### Bug Fixes
+
+* create default theme symlink ([c567a6e](https://github.com/forepath/obms/commit/c567a6e00a7fbe9d67cd00cebcbbb4364a6c7bf4))
+
 ## [1.5.1](https://github.com/forepath/obms/compare/v1.5.0...v1.5.1) (2025-09-02)
 
 
