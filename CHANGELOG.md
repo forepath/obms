@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.3](https://github.com/forepath/obms/compare/v1.4.2...v1.4.3) (2025-09-02)
+
+
+### Bug Fixes
+
+* company logo fallback ([54bda91](https://github.com/forepath/obms/commit/54bda91fb447dc00ad5faca88b1cc6623afc7a37))
+
 ## [1.4.2](https://github.com/forepath/obms/compare/v1.4.1...v1.4.2) (2025-09-02)
 
 
