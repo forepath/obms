@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.1](https://github.com/forepath/obms/compare/v1.5.0...v1.5.1) (2025-09-02)
+
+
+### Bug Fixes
+
+* fastcgi endpoint ([90f9bdc](https://github.com/forepath/obms/commit/90f9bdc63b7b648aa02d008c6467b0cd08d940eb))
+
 ## [1.5.0](https://github.com/forepath/obms/compare/v1.4.3...v1.5.0) (2025-09-02)
 
 
