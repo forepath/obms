@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0a44138abd975b685774977072aa68f",
+    "content-hash": "e20fc7379da5de3c149ced0e914b280c",
     "packages": [
         {
             "name": "awobaz/compoships",
@@ -2003,67 +2003,17 @@
             "time": "2025-07-17T17:25:36+00:00"
         },
         {
-            "name": "forepath/obms-product-sample",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/forepath/obms-product-sample.git",
-                "reference": "ea6194391547d961b7f32ad6976d2f3d7f4f88b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-product-sample/zipball/ea6194391547d961b7f32ad6976d2f3d7f4f88b4",
-                "reference": "ea6194391547d961b7f32ad6976d2f3d7f4f88b4",
-                "shasum": ""
-            },
-            "require": {
-                "forepath/obms-composer-installer": "^1.0",
-                "forepath/obms-module-sdk": "^1.0",
-                "php": "^8.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13",
-                "phpstan/phpstan": "^1.10"
-            },
-            "type": "obms-product",
-            "extra": {
-                "dir": "Sample"
-            },
-            "autoload": {
-                "psr-4": {
-                    "OBMS\\Products\\Sample\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "The OBMS Sample product.",
-            "homepage": "https://forepath.io",
-            "keywords": [
-                "obms",
-                "open business management software"
-            ],
-            "support": {
-                "docs": "https://forepath.io/docs/obms",
-                "email": "support@forepath.io",
-                "issues": "https://github.com/forepath/obms-product-sample/issues",
-                "source": "https://github.com/forepath/obms-product-sample"
-            },
-            "time": "2025-07-17T17:06:50+00:00"
-        },
-        {
             "name": "forepath/obms-theme-aurora",
-            "version": "v1.3.6",
+            "version": "v1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-theme-aurora.git",
-                "reference": "d52504aa47e6a59c77f9a640f77b87fe500a1ad0"
+                "reference": "0042ef4433869d9051a471dea4155982a27bc79c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/d52504aa47e6a59c77f9a640f77b87fe500a1ad0",
-                "reference": "d52504aa47e6a59c77f9a640f77b87fe500a1ad0",
+                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/0042ef4433869d9051a471dea4155982a27bc79c",
+                "reference": "0042ef4433869d9051a471dea4155982a27bc79c",
                 "shasum": ""
             },
             "require": {
@@ -2093,7 +2043,7 @@
                 "issues": "https://github.com/forepath/obms-theme-aurora/issues",
                 "source": "https://github.com/forepath/obms-theme-aurora"
             },
-            "time": "2025-09-03T08:46:26+00:00"
+            "time": "2025-09-03T14:55:31+00:00"
         },
         {
             "name": "fruitcake/php-cors",
