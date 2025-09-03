@@ -3,7 +3,7 @@
     "name": "forepath/obms",
     "type": "project",
     "description": "The OBMS core application.",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "keywords": ["obms", "open business management software"],
     "license": "Apache-2.0",
     "homepage": "https://forepath.io",
