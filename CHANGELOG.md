@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2](https://github.com/forepath/obms/compare/v1.6.1...v1.6.2) (2025-09-03)
+
+
+### Bug Fixes
+
+* center icons on action buttons ([c11edc3](https://github.com/forepath/obms/commit/c11edc3f6fcf3c1c627c33bf79acf938234fa8a2))
+
 ## [1.6.1](https://github.com/forepath/obms/compare/v1.6.0...v1.6.1) (2025-09-03)
 
 
