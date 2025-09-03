@@ -148,6 +148,8 @@ class AdminSettingsController extends Controller
                 switch ($setting) {
                     case 'theme.primary':
                         return '#040E29';
+                    case 'theme.secondary':
+                        return '#FF6B00';
                     case 'theme.white':
                         return '#FFFFFF';
                     case 'theme.gray':
