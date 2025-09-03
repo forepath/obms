@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.4](https://github.com/forepath/obms/compare/v1.6.3...v1.6.4) (2025-09-03)
+
+
+### Bug Fixes
+
+* remove test product module ([9fa7f8b](https://github.com/forepath/obms/commit/9fa7f8b17ec6da8463f315f8a4dd4de72c15f1dd))
+
 ## [1.6.3](https://github.com/forepath/obms/compare/v1.6.2...v1.6.3) (2025-09-03)
 
 
