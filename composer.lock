@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e40a1b0ca9998452ce67474d54dd6294",
+    "content-hash": "a0a44138abd975b685774977072aa68f",
     "packages": [
         {
             "name": "awobaz/compoships",
@@ -2054,16 +2054,16 @@
         },
         {
             "name": "forepath/obms-theme-aurora",
-            "version": "v1.3.5",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forepath/obms-theme-aurora.git",
-                "reference": "0a7b7dae400db9dec1212e726d0e70d8f523d3a6"
+                "reference": "d52504aa47e6a59c77f9a640f77b87fe500a1ad0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/0a7b7dae400db9dec1212e726d0e70d8f523d3a6",
-                "reference": "0a7b7dae400db9dec1212e726d0e70d8f523d3a6",
+                "url": "https://api.github.com/repos/forepath/obms-theme-aurora/zipball/d52504aa47e6a59c77f9a640f77b87fe500a1ad0",
+                "reference": "d52504aa47e6a59c77f9a640f77b87fe500a1ad0",
                 "shasum": ""
             },
             "require": {
@@ -2093,7 +2093,7 @@
                 "issues": "https://github.com/forepath/obms-theme-aurora/issues",
                 "source": "https://github.com/forepath/obms-theme-aurora"
             },
-            "time": "2025-09-02T10:35:22+00:00"
+            "time": "2025-09-03T08:46:26+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -3321,20 +3321,20 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.26.4",
+            "version": "v12.27.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "085a367a32ba86fcfa647bfc796098ae6f795b09"
+                "reference": "168844fe531baaa11db00f7902fd0116d46d3bdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/085a367a32ba86fcfa647bfc796098ae6f795b09",
-                "reference": "085a367a32ba86fcfa647bfc796098ae6f795b09",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/168844fe531baaa11db00f7902fd0116d46d3bdd",
+                "reference": "168844fe531baaa11db00f7902fd0116d46d3bdd",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.11|^0.12|^0.13",
+                "brick/math": "^0.11|^0.12|^0.13|^0.14",
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
@@ -3534,20 +3534,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-08-29T14:15:53+00:00"
+            "time": "2025-09-02T23:59:38+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.33.4",
+            "version": "v5.33.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "678362049ce5b9ce96673ac0282bbfda3279eca9"
+                "reference": "ef1c74b8134432eddabbd512e6e61a2e84a13d7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/678362049ce5b9ce96673ac0282bbfda3279eca9",
-                "reference": "678362049ce5b9ce96673ac0282bbfda3279eca9",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/ef1c74b8134432eddabbd512e6e61a2e84a13d7a",
+                "reference": "ef1c74b8134432eddabbd512e6e61a2e84a13d7a",
                 "shasum": ""
             },
             "require": {
@@ -3612,9 +3612,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.33.4"
+                "source": "https://github.com/laravel/horizon/tree/v5.33.5"
             },
-            "time": "2025-08-25T13:31:24+00:00"
+            "time": "2025-08-31T23:36:14+00:00"
         },
         {
             "name": "laravel/passport",
@@ -8714,16 +8714,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v5.28.0",
+            "version": "v5.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "01e23904eec6075e032e07f3235607b463d9ecf3"
+                "reference": "4dea377ca41ca88aaec3939ac7b720b99c17c10e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/01e23904eec6075e032e07f3235607b463d9ecf3",
-                "reference": "01e23904eec6075e032e07f3235607b463d9ecf3",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/4dea377ca41ca88aaec3939ac7b720b99c17c10e",
+                "reference": "4dea377ca41ca88aaec3939ac7b720b99c17c10e",
                 "shasum": ""
             },
             "type": "library",
@@ -8769,9 +8769,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v5.28.0"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v5.28.1"
             },
-            "time": "2025-08-28T13:24:41+00:00"
+            "time": "2025-09-03T06:12:58+00:00"
         },
         {
             "name": "symfony/clock",
