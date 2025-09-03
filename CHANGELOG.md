@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.5](https://github.com/forepath/obms/compare/v1.6.4...v1.6.5) (2025-09-03)
+
+
+### Bug Fixes
+
+* invoice reminder sent column ([772e702](https://github.com/forepath/obms/commit/772e7027f3c804d4295b320502da6973f64d036c))
+
 ## [1.6.4](https://github.com/forepath/obms/compare/v1.6.3...v1.6.4) (2025-09-03)
 
 
