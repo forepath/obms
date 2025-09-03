@@ -33,7 +33,6 @@
         "endroid/qr-code": "^5.1",
         "forepath/obms-module-sdk": "^1.0",
         "forepath/obms-paymentgateway-paypal": "^1.0",
-        "forepath/obms-product-sample": "^1.0",
         "forepath/obms-theme-aurora": "^1.0",
         "guzzlehttp/guzzle": "^7.8",
         "horstoeko/zugferd-laravel": "^1.0",

@@ -116,7 +116,7 @@ class CustomerShopController extends Controller
                 )
             ) {
                 $handler       = Products::get($form->product_type);
-                $hasCustomForm = collect(array_keys((array) $handler->ui()))->contains('order_form') && $handler->ui()->order_form;
+                $hasCustomForm = collect(array_keys((array) $handler?->ui()))->contains('order_form') && $handler?->ui()->order_form;
 
                 return view($hasCustomForm ? $handler->ui()->order_form : 'customer.shop.form', [
                     'form' => $form,
