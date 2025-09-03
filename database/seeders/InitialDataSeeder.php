@@ -323,6 +323,13 @@ class InitialDataSeeder extends Seeder
             ]);
         }
 
+        if (! Setting::where('setting', '=', 'theme.secondary')->exists()) {
+            Setting::create([
+                'setting' => 'theme.secondary',
+                'value'   => '#FF6B00',
+            ]);
+        }
+
         if (! Setting::where('setting', '=', 'theme.white')->exists()) {
             Setting::create([
                 'setting' => 'theme.white',

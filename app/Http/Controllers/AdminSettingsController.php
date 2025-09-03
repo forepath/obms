@@ -178,6 +178,7 @@ class AdminSettingsController extends Controller
             if (
                 collect([
                     'theme.primary',
+                    'theme.secondary',
                     'theme.white',
                     'theme.gray',
                     'theme.success',
