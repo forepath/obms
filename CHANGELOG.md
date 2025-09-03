@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/forepath/obms/compare/v1.5.2...v1.6.0) (2025-09-03)
+
+
+### Features
+
+* https link enforcement ([9b20011](https://github.com/forepath/obms/commit/9b2001181a610aaee7abf0d00c68609772cfe816))
+
+
+### Bug Fixes
+
+* pdf class alias ([6a174fd](https://github.com/forepath/obms/commit/6a174fdec62fb8c8c49e204e8f1902be706a7ae9))
+
 ## [1.5.2](https://github.com/forepath/obms/compare/v1.5.1...v1.5.2) (2025-09-02)
 
 
