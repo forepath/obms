@@ -38,7 +38,7 @@
 | forepath/obms-module-sdk@v1.0.1 | Apache-2.0 |
 | forepath/obms-paymentgateway-paypal@v1.0.0 | Apache-2.0 |
 | forepath/obms-product-sample@v1.0.0 | Apache-2.0 |
-| forepath/obms-theme-aurora@v1.3.5 | Apache-2.0 |
+| forepath/obms-theme-aurora@v1.3.6 | Apache-2.0 |
 | fruitcake/php-cors@v1.3.0 | MIT |
 | goetas-webservices/xsd2php-runtime@v0.2.17 | MIT |
 | graham-campbell/result-type@v1.1.3 | MIT |
@@ -56,8 +56,8 @@
 | jms/metadata@2.8.0 | MIT |
 | jms/serializer@3.32.5 | MIT |
 | laravel/fortify@v1.30.0 | MIT |
-| laravel/framework@v12.26.4 | MIT |
-| laravel/horizon@v5.33.4 | MIT |
+| laravel/framework@v12.27.1 | MIT |
+| laravel/horizon@v5.33.5 | MIT |
 | laravel/passport@v12.4.2 | MIT |
 | laravel/pint@v1.24.0 | MIT |
 | laravel/prompts@v0.3.6 | MIT |
@@ -167,7 +167,7 @@
 | spatie/ignition@1.15.1 | MIT |
 | spatie/laravel-ignition@2.9.1 | MIT |
 | stella-maris/clock@0.1.7 | MIT |
-| swagger-api/swagger-ui@v5.28.0 | Apache-2.0 |
+| swagger-api/swagger-ui@v5.28.1 | Apache-2.0 |
 | symfony/clock@v7.3.0 | MIT |
 | symfony/console@v7.3.3 | MIT |
 | symfony/css-selector@v7.3.0 | MIT |
