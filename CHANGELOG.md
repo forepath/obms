@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.3](https://github.com/forepath/obms/compare/v1.6.2...v1.6.3) (2025-09-03)
+
+
+### Bug Fixes
+
+* secondary theme color defaults ([9339afd](https://github.com/forepath/obms/commit/9339afd1215e9e16f13ff9ce5afb970dcd4dfdaa))
+
 ## [1.6.2](https://github.com/forepath/obms/compare/v1.6.1...v1.6.2) (2025-09-03)
 
 
